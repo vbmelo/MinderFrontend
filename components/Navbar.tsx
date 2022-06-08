@@ -39,7 +39,7 @@ const NavbarComp = () => {
                 <Link href="/dashboard" passHref>
                   <Nav.Link>Dashboard</Nav.Link>
                 </Link>
-                <NavDropdown title="Profile" id="basic-nav-dropdown" >
+                <NavDropdown title={user.email} id="basic-nav-dropdown" >
                   <NavDropdown.Item>Signed in as: <a href="">{user.email}</a></NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item onClick={() => {
@@ -53,16 +53,19 @@ const NavbarComp = () => {
               </>
             ) : (
               <>
-                <Link href="/signup" passHref>
-                  <Nav.Link>Signup</Nav.Link>
+                <Link href="/" passHref>
+                  <Nav.Link>Home</Nav.Link>
                 </Link>
                 <Link href="/login" passHref>
                   <Nav.Link>Login</Nav.Link>
                 </Link>
+                
               </>
             )}
           </Nav>
+          
         </Navbar.Collapse>
+        
       </Container>
     </Navbar>
   )

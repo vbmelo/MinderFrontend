@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
@@ -26,14 +27,14 @@ const Login = () => {
   return (
     <div className="outer">
       <Container>
-      <Row className="justify-content-md-center mb-20">
-        <Col lg="3">
-        <img src="https://media.discordapp.net/attachments/951497109167829012/981032753124479016/MinderLogo.png" alt="Minder"
-        className="d-inline-block"
-        width="400"
-        />
-        </Col>
-      </Row>
+        <Row className="justify-content-md-center">
+            <Col xs={12} md={5} className="mb-5" >
+              <img src="https://media.discordapp.net/attachments/951497109167829012/981032753124479016/MinderLogo.png" alt="Minder"
+              className="d-inline-block"
+              width="400"
+              />
+            </Col>
+        </Row>
       </Container>
       
         <div className="inner">
@@ -75,6 +76,11 @@ const Login = () => {
                 </Form.Group>
                 <Button className="btn btn-dark btn-lg btn-block" type="submit">
                 Login
+                </Button>
+                <Button className='bg-transparent border-0 m-2 px-2'variant="dark" size="lg">
+                  <Link href="/signup" passHref>
+                    <h6>Don't have an account?</h6>
+                  </Link>
                 </Button>
         
             </Form>

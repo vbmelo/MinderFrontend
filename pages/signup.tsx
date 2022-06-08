@@ -1,8 +1,11 @@
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import { useAuth } from '../context/AuthContext'
 
 const Signup = () => {
+  const router = useRouter()
   const { user, signup } = useAuth()
   console.log(user)
   const [data, setData] = useState({
@@ -15,6 +18,7 @@ const Signup = () => {
 
     try {
       await signup(data.email, data.password)
+      router.push('/dashboard')
     } catch (err) {
       console.log(err)
     }
@@ -72,6 +76,11 @@ const Signup = () => {
 
                     <Button className="btn btn-dark btn-lg btn-block" type="submit">
                         Signup
+                    </Button>
+                    <Button className='bg-transparent border-0 m-2 px-2'variant="dark" size="lg">
+                      <Link href="/login" passHref>
+                        <h6>Already have an account?</h6>
+                      </Link>
                     </Button>
                 </Form>
             </div>

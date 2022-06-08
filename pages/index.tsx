@@ -43,7 +43,7 @@ const Home: NextPage = () => {
                       <h2>Signup</h2>
                     </Link>
                   </Button>
-                  <Button className='bg-transparent'variant="bg-transparent" size="lg">
+                  <Button className='bg-transparent border-0'variant="dark" size="lg">
                     <Link href="/login" passHref>
                       <h6>Or Login if you already have an account</h6>
                     </Link>
