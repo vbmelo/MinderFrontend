@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import { useAuth } from '../context/AuthContext'
+import Image from 'next/image'
 
 const Login = () => {
   const router = useRouter()
@@ -29,10 +30,13 @@ const Login = () => {
       <Container>
         <Row className="justify-content-md-center">
             <Col xs={12} md={5} className="mb-5" >
-              <img src="https://media.discordapp.net/attachments/951497109167829012/981032753124479016/MinderLogo.png" alt="Minder"
-              className="d-inline-block"
-              width="400"
-              />
+            <Image 
+              src="/assets/MinderLogo.png"
+              className='d-inline-block'
+              width={320}
+              height={70}
+              layout='responsive'
+            />
             </Col>
         </Row>
       </Container>

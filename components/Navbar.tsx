@@ -3,6 +3,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import Link from 'next/link'
 import { useAuth } from '../context/AuthContext'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 import styles from '../styles/Navbar.module.css'
 
@@ -16,20 +17,13 @@ const NavbarComp = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Link href="/" passHref>
             <Navbar.Brand href="#home">
-              <img
-                  alt=""
-                  src="https://media.discordapp.net/attachments/951497109167829012/981032411762675712/MinderM.png"
-                  width="50"
-                  height="35"
-                  className="d-inline-block align-center"
+              <Image 
+                src="/assets/MinderLogo.png"
+                className='d-inline-block'
+                width={320}
+                height={70}
+                layout='responsive'
               />
-              {/* <img
-                  alt=""
-                  src="https://media.discordapp.net/attachments/951497109167829012/981032753124479016/MinderLogo.png"
-                  width="150"
-                  height="35"
-                  className="d-inline-block align-center"
-              /> */}
             </Navbar.Brand>
           </Link>
         <Navbar.Collapse id="basic-navbar-nav">
