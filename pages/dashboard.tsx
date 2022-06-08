@@ -19,6 +19,7 @@ const Dashboard = () => {
               width={320}
               height={70}
               layout='responsive'
+              alt='MinderLogo'
             />
           </Link>
         </Col>

@@ -19,6 +19,7 @@ const Home: NextPage = () => {
             width={320}
             height={70}
             layout='responsive'
+            alt='MinderLogo'
           />
           </Col>
           

@@ -18,11 +18,12 @@ const NavbarComp = () => {
           <Link href="/" passHref>
             <Navbar.Brand href="#home">
               <Image 
-                src="/assets/MinderLogo.png"
+                src="/assets/MinderM.png"
                 className='d-inline-block'
-                width={320}
-                height={70}
-                layout='responsive'
+                width={50}
+                height={40}
+                layout='fixed'
+                alt='MinderLogoM'
               />
             </Navbar.Brand>
           </Link>

@@ -38,6 +38,7 @@ const Signup = () => {
               width={320}
               height={70}
               layout='responsive'
+              alt='MinderLogo'
             />
             </Col>
         </Row>

@@ -24,7 +24,7 @@ body, html, .App, #root, .outer {
 }
 
 .inner {
-  width: 50vh;
+  width: 350px;
   margin: auto;
   color:white;
   background-color: rgba(34, 35, 58, 0.8);
@@ -48,6 +48,14 @@ body, html, .App, #root, .outer {
 
 .custom-control-label {
   font-weight: 400;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand>Image {
+  padding: 7px 14px;
 }
 
 @tailwind base;
