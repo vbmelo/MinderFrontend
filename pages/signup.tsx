@@ -30,8 +30,8 @@ const Signup = () => {
   return (
     <div className="outer">
       <Container>
-      <Row className="justify-content-md-center">
-            <Col xs={12} md={5} className="mb-5" >
+        <Row className="justify-content-md-center">
+          <Col xs={12} md={4} className="mb-5" >
             <Image 
               src="/assets/MinderLogo.png"
               className='d-inline-block'
@@ -40,57 +40,60 @@ const Signup = () => {
               layout='responsive'
               alt='MinderLogo'
             />
-            </Col>
+          </Col>
+        </Row>
+        <Row className="justify-content-md-center">
+          <Col xs={12} md={5} className="mb-5" >
+              <div className="inner">
+                  <div>
+                    <h1 className="text-center my-3 ">Signup</h1>
+                    <Form onSubmit={handleSignup}>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control
+                            type="email"
+                            placeholder="Enter email"
+                            required
+                            onChange={(e: any) =>
+                            setData({
+                                ...data,
+                                email: e.target.value,
+                            })
+                            }
+                            value={data.email}
+                        />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                            type="password"
+                            placeholder="Password"
+                            required
+                            onChange={(e: any) =>
+                            setData({
+                                ...data,
+                                password: e.target.value,
+                            })
+                            }
+                            value={data.password}
+                        />
+                        </Form.Group>
+
+                        <Button className="btn btn-dark btn-lg btn-block" type="submit">
+                            Signup
+                        </Button>
+                        <Button className='bg-transparent border-0 m-2 px-2'variant="dark" size="lg">
+                          <Link href="/login" passHref>
+                            <h6>Already have an account?</h6>
+                          </Link>
+                        </Button>
+                    </Form>
+                </div>
+            </div>
+          </Col>
         </Row>
       </Container>
-        <div className="inner">
-            <div>
-                <h1 className="text-center my-3 ">Signup</h1>
-                <Form onSubmit={handleSignup}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control
-                        type="email"
-                        placeholder="Enter email"
-                        required
-                        onChange={(e: any) =>
-                        setData({
-                            ...data,
-                            email: e.target.value,
-                        })
-                        }
-                        value={data.email}
-                    />
-                    </Form.Group>
-
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                        type="password"
-                        placeholder="Password"
-                        required
-                        onChange={(e: any) =>
-                        setData({
-                            ...data,
-                            password: e.target.value,
-                        })
-                        }
-                        value={data.password}
-                    />
-                    </Form.Group>
-
-                    <Button className="btn btn-dark btn-lg btn-block" type="submit">
-                        Signup
-                    </Button>
-                    <Button className='bg-transparent border-0 m-2 px-2'variant="dark" size="lg">
-                      <Link href="/login" passHref>
-                        <h6>Already have an account?</h6>
-                      </Link>
-                    </Button>
-                </Form>
-            </div>
-
-        </div>
     </div>
     
   )
