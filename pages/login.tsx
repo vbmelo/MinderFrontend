@@ -84,7 +84,7 @@ const Login = () => {
                     </Button>
                     <Button className='bg-transparent border-0 m-2 px-2'variant="dark" size="lg">
                       <Link href="/signup" passHref>
-                        <h6>Don't have an account?</h6>
+                        <h6>Don&apos;t have an account?</h6>
                       </Link>
                     </Button>
             
