@@ -63,7 +63,6 @@ const Login = () => {
                         placeholder="Enter email"
                     />
                     </Form.Group>
-
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control
@@ -79,15 +78,16 @@ const Login = () => {
                         placeholder="Password"
                     />
                     </Form.Group>
-                    <Button className="btn btn-dark btn-lg btn-block" type="submit">
-                    Login
-                    </Button>
-                    <Button className='bg-transparent border-0 m-2 px-2'variant="dark" size="lg">
-                      <Link href="/signup" passHref>
-                        <h6>Don&apos;t have an account?</h6>
-                      </Link>
-                    </Button>
-            
+                    <div className="d-grid gap-3 pt-4">
+                      <Button className="rounded" type="submit" variant="outline-light" size="lg">
+                        Login
+                      </Button>
+                      <Button className='bg-transparent border-0' variant="dark" size="lg">
+                        <Link href="/signup" passHref>
+                        <h6 className='hover:text-black' >Don&apos;t have an account?</h6>
+                        </Link>
+                      </Button>
+                    </div>
                 </Form>
                 </div>
               </div>

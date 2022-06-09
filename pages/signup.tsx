@@ -83,7 +83,7 @@ const Signup = () => {
                           <Button className="rounded" type="submit" variant="outline-light" size="lg">
                               Signup
                           </Button>
-                          <Button className='bg-transparent border-0 m-2 px-2' variant="dark" size="lg">
+                          <Button className='bg-transparent border-0' variant="dark" size="lg">
                             <Link href="/login" passHref>
                               <h6 className='hover:text-black' >Already have an account?</h6>
                             </Link>
