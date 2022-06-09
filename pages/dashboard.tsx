@@ -7,6 +7,7 @@ import Image from 'next/image'
 
 const Dashboard = () => {
   const { user } = useAuth()
+  console.log('Obrigado pelo feedback na interface GugaMCZ')
   return (
     <div>
       <Container>
