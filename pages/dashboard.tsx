@@ -12,7 +12,7 @@ const Dashboard = () => {
       <Container>
       <Row className="justify-content-md-center p-10">
         <Col lg="4">
-          <Link href="http://localhost:3001/trello-clone#/" passHref>
+          <Link href="https://minder-boards.vercel.app" passHref>
             <Image 
               src="/assets/MinderLogo.png"
               className='d-inline-block'
@@ -29,7 +29,7 @@ const Dashboard = () => {
       </Row>
       <Row className="justify-content-md-center m-5">
             <Button variant="outline-light"size="lg">
-              <Link href="http://localhost:3001/trello-clone#/" passHref>
+              <Link href="https://minder-boards.vercel.app" passHref>
                 <h3>Go to my Minder Boards</h3>
               </Link>
             </Button>
