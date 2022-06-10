@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             <h4 className="px-4 pt-12 text-gray-100">
               Organize,<br/>
               Reorganize, <br/>
-              Give a Boost in your productivity,<br/>
+              Give a Boost to your productivity,<br/>
               It&apos;s never been easier to manage your tasks!
             </h4>
             <div className="pt-20 px-4 text-gray-200">
