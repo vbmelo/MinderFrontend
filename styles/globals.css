@@ -58,6 +58,8 @@ body, html, .App, #root, .outer {
   padding: 7px 14px;
 }
 
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

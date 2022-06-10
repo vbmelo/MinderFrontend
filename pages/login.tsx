@@ -22,6 +22,7 @@ const Login = () => {
       router.push('/dashboard')
     } catch (err) {
       console.log(err)
+      alert(err)
     }
   }
 
@@ -29,7 +30,7 @@ const Login = () => {
     <div className="outer">
       <Container>
         <Row className="justify-content-md-center">
-            <Col xs={12} md={4} className="mb-5" >
+            <Col xs={12} md={5} className="mb-5" >
             <Image 
               src="/assets/MinderLogo.png"
               className='d-inline-block'

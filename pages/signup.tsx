@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
-import { Button, Col, Container, Form, Row } from 'react-bootstrap'
+import { Button, Col, Container, Form, Row, Alert } from 'react-bootstrap'
 import { useAuth } from '../context/AuthContext'
 import Image from 'next/image'
 
@@ -13,18 +13,21 @@ const Signup = () => {
     email: '',
     password: '',
   })
+  const [erro, setErro] = useState(null)
 
   const handleSignup = async (e: any) => {
     e.preventDefault()
-
+    setErro(null)
+    
     try {
       await signup(data.email, data.password)
       router.push('/dashboard')
     } catch (err) {
       console.log(err)
+      alert(err)
     }
-
     console.log(data)
+    
   }
 
   return (
@@ -47,7 +50,7 @@ const Signup = () => {
               <div className="inner">
                   <div>
                     <h1 className="text-center my-3 ">Signup</h1>
-                    <Form onSubmit={handleSignup}>
+                    <Form onSubmit={handleSignup} { ...erro && <Alert color="danger">{erro}</Alert>}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control
