@@ -28,7 +28,7 @@ const Home: NextPage = () => {
               Organize,<br/>
               Reorganize, <br/>
               Give a Boost in your productivity,<br/>
-              It's never been easier to manage your tasks!
+              It&apos;s never been easier to manage your tasks!
             </h4>
             <div className="pt-20 px-4 text-gray-200">
               {user ? (
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
       <Container>
         <Row className="justify-content-md-center px-4">
           <h4 className="text-gray-200">
-            What is Minder?
+            What&apos;s Minder?
           </h4>
           <h5 className="text-gray-200"> 
             Minder is the visual tool that empowers you to manage any type of project, workflow, or task.
